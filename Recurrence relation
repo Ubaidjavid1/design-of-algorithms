@@ -1,0 +1,10 @@
+FOO(A, low, high, x)
+  if (low > high)
+    return False
+  mid = floor((high+low)/2)
+  if (x == A[mid])
+    return True
+  if (x < A[mid])
+    return FOO(A, low, mid-1, x)
+  if (x > A[mid])
+    return FOO(A, mid+1, high, x)
